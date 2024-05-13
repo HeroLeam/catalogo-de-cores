@@ -11,13 +11,13 @@ Uma das principais funcionalidades do site é o criador de cores, onde os usuár
 Além disso, o site possui um gerador de coleções, onde os usuários podem informar o código da cor para adicionar a uma coleção. Assim como no criador de cores, o arquivo gerado deve ser adicionado à pasta do projeto (assets/collections) para que a coleção apareça como filtro no site.
 
 ## Layout web principal
-![Web 1](.src/assets/home.jpg)
+![Web 1](./src/assets/home.jpg)
 
 ## Layout web gerador de cor/cartela
-![Web 2](.src/assets/gerador-cartela.jpg)
+![Web 2](./src/assets/gerador-cartela.jpg)
 
 ## Layout web gerador de coleção/filtro
-![Web 3](.src/assets/gerador-colecoes.jpg)
+![Web 3](./src/assets/gerador-colecoes.jpg)
 
 # Tecnologias utilizadas
 ## Front end

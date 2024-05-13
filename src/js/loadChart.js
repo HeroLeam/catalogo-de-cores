@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function carregarCartelas() {
   var colorList = document.querySelector('.lista-cartela');
-  const pasta = 'src/assets/colorChart';
+  const pasta = '/src/assets/colorChart';
 
   fetch(pasta)
     .then(response => response.text())
@@ -30,7 +30,7 @@ function carregarCartelas() {
         });
 
       files.forEach(file => {
-        fetch(window.location.origin + file)
+        fetch(window.location.origin + pasta + file)
           .then(response => response.text())
           .then(html => {
             var div = document.createElement('div');

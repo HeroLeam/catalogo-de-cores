@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function () {
 function carregarCartelas() {
   var colorList = document.querySelector('.lista-cartela');
 
-  fetch('/catalogo-de-cores/src/assets/colorChart')
+  fetch('src/assets/colorChart')
     .then(response => response.text())
     .then(text => {
       var parser = new DOMParser();
@@ -30,6 +30,7 @@ function carregarCartelas() {
 
       files.forEach(file => {
         fetch(window.location.origin + '/catalogo-de-cores/src/assets/colorChart/' + file)
+
         // fetch(window.location.origin + file)
           .then(response => response.text())
           .then(html => {

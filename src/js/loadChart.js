@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function carregarCartelas() {
   var colorList = document.querySelector('.lista-cartela');
-  const pasta = 'https://api.github.com/repos/heroleam/catalogo-de-cores/contents/src/assets/colorChart';
+  const pasta = 'src/assets/colorChart';
 
   fetch(pasta)
     .then(response => response.text())

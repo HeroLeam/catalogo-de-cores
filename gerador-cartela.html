@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartela de Cores</title>
+  <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/css/reset.css" />
+  <link rel="stylesheet" href="./src/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div>
+      <a class="menu" href="index.html">Ínicio</a>
+      <a class="menu" href="gerador-colecoes.html">Gerador de Coleções</a>
+  </div>
+  </header>
+  <h1>Gerador de Cartelas</h1>
+  <form class="formColorGenerator" id="colorForm">
+    <label class="labelGenerator" for="colorCode">Código de Cor:</label>
+    <input class="inputGenerator" type="text" id="colorCode" name="colorCode" placeholder="AM001" autocomplete="off" required>
+    <label class="labelGenerator" for="colorName">Nome da Cor:</label>
+    <select class="selectGenerator" id="colorName" name="colorName" required>
+      <option value="Amarelo">Amarelo</option>
+      <option value="Azul">Azul</option>
+      <option value="Bordô">Bordô</option>
+      <option value="Branco">Branco</option>
+      <option value="Cinza">Cinza</option>
+      <option value="Creme">Creme</option>
+      <option value="Laranja">Laranja</option>
+      <option value="Mescla">Mescla</option>
+      <option value="Marrom">Marrom</option>
+      <option value="Preto">Preto</option>
+      <option value="Rosa">Rosa</option>
+      <option value="Roxo">Roxo</option>
+      <option value="Verde">Verde</option>
+      <option value="Vermelho">Vermelho</option>
+    </select>
+    <label class="labelGenerator" for="colorDescription">Descrição da Cor:</label>
+    <input class="inputGenerator" type="text" id="colorDescription" name="colorDescription" placeholder="Light" autocomplete="off"
+      required>
+    <label class="labelGenerator" for="baseCode">Código Base:</label>
+    <input class="inputGenerator" type="text" id="baseCode" name="baseCode" placeholder="Código pantone ou material" autocomplete="off">
+    <label class="labelGenerator" for="hexCode">Código HEX:</label>
+    <input class="inputGenerator" type="text" id="hexCode" name="hexCode" placeholder="000000" autocomplete="off" minlength="6"
+      maxlength="6" required>
+    <label class="labelGenerator" for="rgbCode" style="display:none;">Código RGB:</label>
+    <input class="inputGenerator" type="text" id="rgbCode" name="rgbCode" readonly style="display:none;">
+    <label class="labelGenerator" for="pantone">Pág. Pantone:</label>
+    <input class="inputGenerator" type="text" id="pantone" name="pantone"
+      placeholder="Número da página da Cartela Pantone" autocomplete="off">
+    <label class="labelGenerator" for="sublimation">Célula Cartela da Sublimção:</label>
+    <input class="inputGenerator" type="text" id="sublimation" name="sublimation"
+      placeholder="A5 (Célula da cartela de sublimação)" autocomplete="off">
+    <button class="buttonGenerator" type="submit">Gerar Cartela Cor</button>
+  </form>
+  <div class="footer">
+    <p>&copy; 2024. Todos os direitos reservados.<br>Página desenvolvida por<br><a
+        href="https://heroleam.github.io/herofield" target="_blank">HeroLeam</a></p>
+  </div>
+  <script src="./src/js/generator-colors.js"></script>
+</body>
+
+</html>

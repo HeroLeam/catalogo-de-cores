@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${colorCode}</title>
+    <style>
+        .${colorCode} {
+            background-color: #${hexCode};
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cartela ${colorCode}">
+        <h2 class="codigo" style="color: ${colorText};">${colorCode}</h2>
+        <div class="linha"><span class="descricao">Cor:&nbsp;</span>${colorName}</div>
+        <div class="linha"><span class="descricao">Descrição:&nbsp;</span>${colorDescription}</div>
+        <div class="linha"><span class="descricao">Cod. Base:&nbsp;</span>
+            <div id="copiar">${baseCode}</div>
+            <button class="btn-copiar">
+                <img class="iconecopiar" src="./src/img/iconCopy.svg" alt="Imagem de um ícone que representa cópia" />
+            </button>
+        </div>
+        <div class="linha"><span class="descricao">RGB:&nbsp;</span>${rgbCode}</div>
+        <div class="linha"><span class="descricao">Hex:&nbsp;</span>#
+            <div id="copiar">${hexCode}</div>
+            <button class="btn-copiar">
+                <img class="iconecopiar" src="./src/img/iconCopy.svg" alt="Imagem de um ícone que representa cópia" />
+            </button>
+        </div>
+        <div class="linha"><span class="descricao">Pág. Pantone:&nbsp;</span>${pagPantone}</div>
+        <div class="linha"><span class="descricao">Célula Subli:&nbsp;</span>${sublimation}</div>
+        <button class="btn-salvar" onclick="gerarimagem(this)">
+            <img class="iconesalvar" src="./src/img/iconImage.svg" alt="Imagem de um ícone que representa uma imagem">
+        </button>
+    </div>
+</body>
+
+</html>

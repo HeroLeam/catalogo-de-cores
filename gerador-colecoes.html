@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartela de Cores</title>
+    <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <a class="menu" href="index.html">Ínicio</a>
+            <a class="menu" href="gerador-cartela.html">Gerador de Cartela</a>
+        </div>
+    </header>
+    <h1>Gerador de Coleções</h1>
+    <form class="formCollectionGenerator" id="collectionForm">
+        <div class="optionGeral" id="options"></div>
+
+        <label class="labelGenerator" for="option">Adicione abaixo o código da cor para cartela:</label>
+        <input class="inputGenerator" type="text" id="option" name="option" required autocomplete="off">
+    
+        <button class="buttonGenerator" type="button" onclick="addOption()">Adicionar Cor</button>
+
+        <label class="labelGenerator" for="fileName">Nome da coleção:</label>
+        <input class="inputGenerator" type="text" id="fileName" name="fileName" required autocomplete="off">
+        
+        <button class="buttonGenerator" type="button" onclick="downloadJSON()">Baixar JSON</button>
+    </form>
+
+    <div class="footer">
+        <p>&copy; 2024. Todos os direitos reservados.<br>Página desenvolvida por<br><a
+                href="https://heroleam.github.io/herofield" target="_blank">HeroLeam</a></p>
+    </div>
+
+
+    <script src="./src/js/generator-collection.js"></script>
+</body>
+
+</html>

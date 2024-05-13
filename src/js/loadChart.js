@@ -29,7 +29,7 @@ function carregarCartelas() {
         });
 
       files.forEach(file => {
-        fetch(window.location.origin + file)
+        fetch(window.location.origin + 'src/assets/colorChart' + file)
           .then(response => response.text())
           .then(html => {
             var div = document.createElement('div');

@@ -30,7 +30,7 @@ function carregarCartelas() {
         });
 
       files.forEach(file => {
-        fetch(window.location.origin + pasta + file)
+        fetch(window.location.origin + file)
           .then(response => response.text())
           .then(html => {
             var div = document.createElement('div');

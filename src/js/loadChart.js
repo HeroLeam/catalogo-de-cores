@@ -4,8 +4,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function carregarCartelas() {
   var colorList = document.querySelector('.lista-cartela');
+  const pasta = 'src/assets/colorChart';
 
-  fetch('src/assets/colorChart')
+  fetch(pasta)
     .then(response => response.text())
     .then(text => {
       var parser = new DOMParser();
@@ -29,9 +30,11 @@ function carregarCartelas() {
         });
 
       files.forEach(file => {
-        fetch(window.location.origin + '/catalogo-de-cores/src/assets/colorChart/' + file)
-
+        const url = window.location.origin + '/catalogo-de-cores/' + pasta + file;
+        console.log('URL do arquivo:', url); // Adicionando o console.log() aqui
         // fetch(window.location.origin + file)
+
+        fetch(url)
           .then(response => response.text())
           .then(html => {
             var div = document.createElement('div');
@@ -39,5 +42,4 @@ function carregarCartelas() {
             colorList.appendChild(div);
           });
       });
-    });
-}
+    }

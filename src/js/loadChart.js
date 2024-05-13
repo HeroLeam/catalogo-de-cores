@@ -31,8 +31,7 @@ function carregarCartelas() {
         });
 
       files.forEach(file => {
-        fetch('https://heroleam.github.io/catalogo-de-cores/' + file)
-        // fetch(window.location.origin + file)
+        fetch(window.location.origin + file)
           .then(response => response.text())
           .then(html => {
             var div = document.createElement('div');

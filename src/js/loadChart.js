@@ -4,7 +4,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function carregarCartelas() {
   var colorList = document.querySelector('.lista-cartela');
-  const pasta = 'src/assets/colorChart';
+  const pasta = 'https://heroleam.github.io/catalogo-de-cores/src/assets/colorChart';
+  // const pasta = 'src/assets/colorChart';
 
   fetch(pasta)
     .then(response => response.text())
@@ -30,11 +31,8 @@ function carregarCartelas() {
         });
 
       files.forEach(file => {
-        const url = window.location.origin + '/catalogo-de-cores/' + pasta + file;
-        console.log('URL do arquivo:', url); // Adicionando o console.log() aqui
+        fetch('https://heroleam.github.io/catalogo-de-cores/' + file)
         // fetch(window.location.origin + file)
-
-        fetch(url)
           .then(response => response.text())
           .then(html => {
             var div = document.createElement('div');
@@ -42,4 +40,5 @@ function carregarCartelas() {
             colorList.appendChild(div);
           });
       });
-    }
+    });
+}
